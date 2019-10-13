@@ -1,0 +1,1 @@
+docker-compose -p gitlab-runner up -d

@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  mssql: 
+    image: microsoft/mssql-server-linux:latest
+    restart: always
+    ports:
+      - "1433:1433"
+    volumes:
+      - H:\Development\Workspace IntelliJ\lean-tubecentric-docker\app\db-init-scripts:/startup-script
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Password1!
+    command: sh -c '/startup-script/mssql_entrypoint.sh & /opt/mssql/bin/sqlservr;'
