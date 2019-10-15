@@ -5,7 +5,7 @@ check_interval = 0
   session_timeout = 1800
 
 [[runners]]
-  name = "gitlab"
+  name = "tubecentric-app"
   url = "https://gitlab.com/"
   token = "sLV99savUi-ZzkxX3QY3"
   executor = "docker"

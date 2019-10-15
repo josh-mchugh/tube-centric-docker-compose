@@ -1,9 +1,15 @@
 version: '3.7'
 
 services:
-  gitlab-runner: 
+  tubecentric-app: 
     image: gitlab/gitlab-runner:latest
     restart: always
     volumes:
       - //var/run/docker.sock:/var/run/docker.sock
-      - ["H:\Development\Workspace IntelliJ\lean-tubecentric-docker\gitlab-runner\config"]:/etc/gitlab-runner
+      - H:\Development\Workspace IntelliJ\lean-tubecentric-docker\gitlab-runner\config\tubecentric-app:/etc/gitlab-runner
+  tubecentric-browser-ext: 
+    image: gitlab/gitlab-runner:latest
+    restart: always
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+      - H:\Development\Workspace IntelliJ\lean-tubecentric-docker\gitlab-runner\config\tubecentric-browser-ext:/etc/gitlab-runner
