@@ -1,3 +1,4 @@
+# README
 Docker Compose for quickly setting up local enviroments.
 
 NOTES:
